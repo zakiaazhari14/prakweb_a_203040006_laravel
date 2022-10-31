@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Category;
+use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,12 +16,75 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        // \App\Models\User::factory(10)->create();
+    {        
+
+        // User::create([
+        //     'name' => 'Zaki Auliya Azhari',
+        //     'email' => 'zakiauliyaazhari@gmail.com',
+        //     'password' => bcrypt('12345')
+
+        // ]);
+
+        // User::create([
+        //     'name' => 'Hasbulloh',
+        //     'email' => 'hasbulloh@gmail.com',
+        //     'password' => bcrypt('12345')
+
+        // ]);
+
+        User::factory(3)->create();
+
+        Category::create([
+            'name' => 'Web Programming',
+            'slug' => 'web-programming'
+        ]);
+        Category::create([
+            'name' => 'Personal',
+            'slug' => 'personal'
+        ]);
+
+        Post::factory(20)->create();
+
+        // Post::create([
+        //     'title' => 'Judul Pertama',
+        //     'slug' => 'judul-pertama',
+        //     'excerpt' =>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi',
+        //     'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi, ullam veritatis quam vero iure facilis modi ut aperiam, alias odit deserunt atque saepe totam reprehenderit. Maxime fugiat, et doloremque vero provident repellat delectus amet dolore placeat laudantium nisi tempora! Quod alias eum dolores possimus quisquam sequi eligendi ab, corporis rerum sapiente blanditiis ipsam vitae molestias facere! Alias, incidunt. Maxime, ipsum est autem nihil voluptate non iusto at sequi blanditiis commodi. Aspernatur repellat, necessitatibus quibusdam voluptatum rerum dicta sequi est nesciunt odio eum vero porro atque!.',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
+
+        // Post::create([
+        //     'title' => 'Judul Ke Dua',
+        //     'slug' => 'judul-ke-dua',
+        //     'excerpt' =>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi',
+        //     'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi, ullam veritatis quam vero iure facilis modi ut aperiam, alias odit deserunt atque saepe totam reprehenderit. Maxime fugiat, et doloremque vero provident repellat delectus amet dolore placeat laudantium nisi tempora! Quod alias eum dolores possimus quisquam sequi eligendi ab, corporis rerum sapiente blanditiis ipsam vitae molestias facere! Alias, incidunt. Maxime, ipsum est autem nihil voluptate non iusto at sequi blanditiis commodi. Aspernatur repellat, necessitatibus quibusdam voluptatum rerum dicta sequi est nesciunt odio eum vero porro atque!.',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
+
+        // Post::create([
+        //     'title' => 'Judul Ke Tiga',
+        //     'slug' => 'judul-ke-tiga',
+        //     'excerpt' =>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi',
+        //     'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi, ullam veritatis quam vero iure facilis modi ut aperiam, alias odit deserunt atque saepe totam reprehenderit. Maxime fugiat, et doloremque vero provident repellat delectus amet dolore placeat laudantium nisi tempora! Quod alias eum dolores possimus quisquam sequi eligendi ab, corporis rerum sapiente blanditiis ipsam vitae molestias facere! Alias, incidunt. Maxime, ipsum est autem nihil voluptate non iusto at sequi blanditiis commodi. Aspernatur repellat, necessitatibus quibusdam voluptatum rerum dicta sequi est nesciunt odio eum vero porro atque!.',
+        //     'category_id' => 2,
+        //     'user_id' => 1
+        // ]);
+
+        // Post::create([
+        //     'title' => 'Judul Ke Empat',
+        //     'slug' => 'judul-ke-empat',
+        //     'excerpt' =>'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi',
+        //     'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, ad qui. Expedita enim magni maxime corporis at architecto nesciunt, explicabo nemo accusantium sunt nisi, ullam veritatis quam vero iure facilis modi ut aperiam, alias odit deserunt atque saepe totam reprehenderit. Maxime fugiat, et doloremque vero provident repellat delectus amet dolore placeat laudantium nisi tempora! Quod alias eum dolores possimus quisquam sequi eligendi ab, corporis rerum sapiente blanditiis ipsam vitae molestias facere! Alias, incidunt. Maxime, ipsum est autem nihil voluptate non iusto at sequi blanditiis commodi. Aspernatur repellat, necessitatibus quibusdam voluptatum rerum dicta sequi est nesciunt odio eum vero porro atque!.',
+        //     'category_id' => 2,
+        //     'user_id' => 2
+        // ]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
     }
 }
